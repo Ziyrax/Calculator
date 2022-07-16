@@ -12,16 +12,21 @@ const response2 = +readline.prompt();
 
 var result;
 
-if (operator == "+") {
-    result = response1 + response2;
-} else if (operator == "-") {
-    result = response1 - response2;
-} else if (operator == "*") {
-    result = response1 * response2;
-} else if (operator == "/") {
-    result = response1 / response2;
-} else {
-    result = "not a valid operation"
+switch (operator) {
+    case "+":
+        result = response1 + response2;
+        break;
+    case "-":
+        result = response1 - response2;
+        break;
+    case "*":
+        result = response1 * response2;
+        break;
+    case "/":
+        result = response1 / response2;
+        break;
+    default:
+        result = "not a valid operation"
 }
 
 console.log(result)
